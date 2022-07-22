@@ -3,7 +3,7 @@ const { comprobarJWT } = require('../helpers');
 
 const socketController = ( socket = new Socket() ) => {
     const token = socket.handshake.headers['x-token'];
-    const usuario = await comprobarJWT( token );
+    const usuario = comprobarJWT( token );
 
     if(!usuario) {
         return socket.disconnect();

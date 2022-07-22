@@ -44,6 +44,7 @@ const comprobarJWT = async( token = '' ) => {
 
 
 module.exports = {
-    generarJWT
+    generarJWT,
+    comprobarJWT
 }
 
